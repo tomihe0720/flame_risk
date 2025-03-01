@@ -82,7 +82,7 @@ async function fetchScandalDetails(influencerName, newsResults) {
       model: "gpt-4-turbo",
       messages: [{ role: "system", content: gptPrompt }],
       temperature: 0.1,
-      max_tokens: 1000,
+      max_tokens: 4000,
     });
 
     console.log("✅ GPTレスポンス取得成功");
