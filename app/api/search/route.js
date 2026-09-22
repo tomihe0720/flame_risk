@@ -18,8 +18,6 @@ async function fetchNews(name) {
     const searchQuery = `${name} 炎上 -site:instagram.com -site:youtube.com -site:wikipedia.org -site:x.com -site:mobile.twitter.com`;
     const url = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(searchQuery)}&key=${GOOGLE_API_KEY}&cx=${SEARCH_ENGINE_ID}&num=5&lr=lang_ja`;
 
-    console.log(`🔍 Google API リクエスト URL: ${url}`);
-
     // タイムアウト制御（5秒以内に応答がない場合はキャンセル）
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 5000);
